@@ -3,6 +3,9 @@ buildscript {
 
     repositories {
         mavenCentral()
+        maven {
+            url  "https://dl.bintray.com/wallaceglenw/FOSS"
+        }
     }
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
@@ -22,11 +25,19 @@ sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
+    jcenter()
+    maven {
+        url 'https://dl.bintray.com/wallaceglenw/FOSS'
+    }
 }
 
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
     testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    // https://mvnrepository.com/artifact/org.apache.commons/commons-math3
+    compile group: 'org.apache.commons', name: 'commons-math3', version: '3.6.1'
+    compile "com.wallace.math.complex:ApacheCommonsComplexWrapper:0.1.1"
 }
 
 compileKotlin {
