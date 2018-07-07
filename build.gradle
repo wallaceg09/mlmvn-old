@@ -39,7 +39,7 @@ dependencies {
 
     // https://mvnrepository.com/artifact/org.apache.commons/commons-math3
     compile group: 'org.apache.commons', name: 'commons-math3', version: '3.6.1'
-    compile "com.wallace.math.complex:ApacheCommonsComplexWrapper:0.1.1"
+    compile "com.wallace.math.complex:ApacheCommonsComplexWrapper:0.1.5"
 }
 
 compileKotlin {
